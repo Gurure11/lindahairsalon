@@ -1,157 +1,274 @@
+
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Happy Tots School</title>
-	<style type="text/css">
-		#main-body{
-			align-items: center;
-			text-align: center;
-			color: white;
-			background-image: url(images/i.jpg);
-			background-size: cover;
-		}
-		
-		#send{
-			color: white;
-			background-color: blue;
-			border-radius: 2px;
-			border: none;
-			padding: 5px;
-		}
-		#send:hover{
-			color: blue;
-			background-color: green;
-			cursor: pointer;
-			opacity: 0.5;
-			transition: 0.15s;
-		}
-		#home{
-			margin-right: 30px;
-		}
-		#details{margin-right: 30px;
-		}
-		#products{
-			margin-right: 30px;
-		}
-		#home:hover{
-			color: red;
-			background-color: green;
-			opacity: 0.5;
-			cursor: pointer;
-			transition: 0.15s;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Checko Trucking</title>
 
-		}
-		#details:hover{
-			color: red;
-			background-color: green;
-			opacity: 0.5;
-			cursor: pointer;
-			transition: 0.15s;
-		}
-		#products:hover{
-			color: red;
-			background-color: green;
-			opacity: 0.5;
-			cursor: pointer;
-			transition: 0.15s;
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-		}
-		#face:hover{
-			color: red;
-			cursor: pointer;
-			opacity: 0.5;
-			background-color: yellow;
-		}
-		#insta:hover{
-			color: red;
-			cursor: pointer;
-			opacity: 0.5;
-			background-color: yellow;
-		}
-		#map:hover{  
-			color: red;
-			cursor: pointer;
-			opacity: 0.5;
-			background-color: yellow;
-		}
+<style>
+:root{
+  --blue:#0a3cff;
+  --green:#0bbf6a;
+}
 
-	</style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f6f9ff;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:15px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:26px;
+  font-weight:bold;
+  color:var(--blue);
+}
+.logo span{color:var(--green)}
+
+nav a{
+  text-decoration:none;
+  background:var(--blue);
+  color:#fff;
+  padding:10px 22px;
+  border-radius:25px;
+  font-weight:bold;
+}
+
+/* SECTION */
+section{
+  padding:60px 8%;
+  text-align:center;
+}
+
+h2{
+  font-size:32px;
+  color:var(--blue);
+  margin-bottom:15px;
+}
+
+/* CONTACT INFO */
+.info p{
+  font-size:18px;
+  margin:8px 0;
+}
+
+/* SOCIAL ICONS */
+.social a{
+  font-size:30px;
+  margin:0 12px;
+  color:var(--blue);
+  transition:.3s;
+}
+.social a:hover{color:var(--green)}
+
+/* FORM */
+form{
+  max-width:500px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+form button{
+  width:100%;
+  padding:14px;
+  background:var(--green);
+  color:#fff;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* MAPS */
+.maps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+
+.map-box iframe{
+  width:100%;
+  height:300px;
+  border:none;
+  border-radius:20px;
+}
+
+/* TRUCK ANIMATION */
+.truck{
+  width:120px;
+  position:fixed;
+  bottom:20px;
+  left:-150px;
+  animation:drive 15s linear infinite;
+}
+
+@keyframes drive{
+  from{left:-150px}
+  to{left:110%}
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  color:#fff;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:34px;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+  animation:pulse 1.5s infinite;
+  z-index:999;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.1)}
+  100%{transform:scale(1)}
+}
+
+/* HOME BUTTON */
+.home-btn{
+  display:inline-block;
+  margin-top:40px;
+  background:var(--blue);
+  color:#fff;
+  padding:14px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  margin-top:60px;
+  background:linear-gradient(45deg,var(--blue),var(--green));
+  color:#fff;
+  padding:25px;
+  text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  h2{font-size:26px}
+}
+</style>
 </head>
-<body id="main-body">
-	<h2>HAPPY TOTS SCHOOL CONTACT FORM</h2><br>
-	<hr>
-	<br>
-	<a id="home" href="index.html">Home Page</a>
-	<a id="details" href="details.html">About Us</a>
-	<a id="events" href="events.html">Events</a><br>
-	<br>
-	<br>
-		<form action="https://formsubmit.co/blessmach@gmail.com" method="POST">
-			<div>
-			
-			<label>Name</label>
-			<input type="text" name="firstName" placeholder="Enter first name"><br>
-			<br>
-			<label>Surname</label>
-			<input type="text" name="lastName" placeholder="Enter Surname"><br>
-			<br>
-			<label>Contact Number</label>
-			<input type="tel" placeholder="cell no."><br><br>
-			<label>Email</label>	
-			<input type="email" name="Email" placeholder="Email Adress"><br>
-				<br>
-			<label>Date Of Enrollment</label>
-			<input type="Date" name="Date"><br>
-			<br>
-			<label>Gender</label>
-			<select>
-				<option value="male">Male</option>
-				<option value="female">Female</option>
-				<option value="other">Other</option>
-			</select>
-			<hr>
-			<label>Message</label>
-			<textarea type="text area" name="Message"></textarea><br>
-			<br>
-			<button id="send" input="submit">Submit</button><br>
-			<br>
-		</div>
-	</form>
-	
-<strong>Contacts</strong> <br>
-<br>
-<br>
-<br>
-Director: 	Linda Machimula <br>     
-Address:    16 Leopard Takawira<br>
-            Kadoma<br>
-			Zimbabwe<br>
 
-Cell Noo:	+263 73 746 2799<br>
+<body>
 
-Email: 		linda@happytotsschool.com<br>
-	         info@happytotsschool.com<br>
-<br>
-<br>
+<header>
+  <div class="logo">Checko <span>Trucking</span></div>
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  </nav>
+</header>
 
-Director: 	Bless Machimula<br>
-Cell No.   	0784318856<br>
-		  	0775907804<br>
-          	0714577666<br>
-Email:	  	bless@happytotsschool.com<br>
+<section>
+  <h2>Contact Checko Trucking</h2>
 
-<a id="map" href="https://goo.gl/maps/ZicnoBzM7CApNXia8">Map Click Me</a><br>
-Contact us directly to learn more about our products, pricing information and any enquiries. <br>
-<br>
-<br>
+  <div class="info">
+    <p><strong>South Africa 🇿🇦</strong><br>
+      A5 Blue Valley Shopping Centre, Centurion<br>
+      📞 +27 79 325 6431
+    </p>
+    <p><strong>Zimbabwe 🇿🇼</strong><br>
+      Office 9 Lindsay House, Eastlea, Harare<br>
+      📞 077 213 0069
+    </p>
+  </div>
+
+  <div class="social">
+    <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/27793256431"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <form onsubmit="sendWhatsApp(); return false;">
+    <h3 style="color:var(--green);margin-bottom:15px;">Send us a message</h3>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send to WhatsApp</button>
+  </form>
+
+  <!-- BACK TO HOME BUTTON -->
+  <a href="index.html" class="home-btn">
+    ← Back to Home
+  </a>
+
+  <!-- MAPS -->
+  <div class="maps">
+    <div class="map-box">
+      <h3>South Africa Branch</h3>
+      <iframe src="https://maps.google.com/maps?q=Blue%20Valley%20Shopping%20Centre%20Centurion&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+
+    <div class="map-box">
+      <h3>Zimbabwe Branch</h3>
+      <iframe src="https://maps.google.com/maps?q=Eastlea%20Harare&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ANIMATED TRUCK -->
+<img src="truck.png" class="truck" alt="Animated Truck">
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/27793256431" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 <footer>
-	&Happy Tots School 2023.
-	<br>
-	<br>
+  <p>© 2026 Checko Trucking Corporate. All Rights Reserved.</p>
 </footer>
 
+<script>
+function sendWhatsApp(){
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  let text = `Hello Checko Trucking,%0A%0AName: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+  window.open("https://wa.me/27793256431?text=" + text, "_blank");
+}
+</script>
 
 </body>
 </html>
